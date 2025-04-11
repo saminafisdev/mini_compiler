@@ -1,0 +1,14 @@
+# Flex and Bison generated files
+lex.yy.c
+parser.tab.c
+parser.tab.h
+
+# Object files
+*.o
+
+# Compiled executable
+parser
+
+# Temporary files
+*.swp
+*.tmp
