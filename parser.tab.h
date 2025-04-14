@@ -61,7 +61,8 @@ extern int yydebug;
     DIV = 262,                     /* DIV  */
     LPAREN = 263,                  /* LPAREN  */
     RPAREN = 264,                  /* RPAREN  */
-    EOL = 265                      /* EOL  */
+    EOL = 265,                     /* EOL  */
+    ANS = 266                      /* ANS  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -74,7 +75,7 @@ union YYSTYPE
 
     int ival;
 
-#line 78 "parser.tab.h"
+#line 79 "parser.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

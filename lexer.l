@@ -7,6 +7,7 @@
 [ \t]+         /* Skip whitespace */
 [\n]           { return EOL; }
 [0-9]+         { yylval.ival = atoi(yytext); return NUMBER; }
+"ANS"          { return ANS; }
 "+"            { return ADD; }
 "-"            { return SUB; }
 "*"            { return MUL; }

@@ -14,7 +14,7 @@ int result;
     int ival;
 }
 
-%token <ival> NUMBER ADD SUB MUL DIV LPAREN RPAREN EOL
+%token <ival> NUMBER ADD SUB MUL DIV LPAREN RPAREN EOL ANS
 %type <ival> program expression
 
 %left ADD SUB
@@ -27,7 +27,8 @@ program:
     ;
 
 expression:
-    NUMBER              { $$ = $1; }
+    ANS { $$ = result; }
+    | NUMBER              { $$ = $1; }
     | LPAREN expression RPAREN { $$ = $2; }
     | expression ADD expression  { $$ = $1 + $3; }
     | expression SUB expression  { $$ = $1 - $3; }
